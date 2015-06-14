@@ -74,3 +74,10 @@ configure :build do
 end
 
 set :slim, { :pretty => true, :sort_attrs => false, :format => :html }
+
+# Syntax
+
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true, :with_toc_data => true, :tables => true, :autolink => true, :gh_blockcode => true
+
+activate :syntax
