@@ -14,7 +14,7 @@ html
 		== javascript_include_tag  "jquery-1.11.3.min"
 		== javascript_include_tag  "js.cookie"
 
-		- if data.page.kind != "index"
+		- if !data.page.has_key?("code_selector") || data.page.code_selector=="on"
 			javascript:
 				$(document).ready(function()
 				{
@@ -68,7 +68,7 @@ html
 		#content
 			.main
 
-				- if data.page.kind != "index"
+				- if !data.page.has_key?("code_selector") || data.page.code_selector=="on"
 					button id="language_all" 全ての言語
 	
 					button id="language_cpp" C++
