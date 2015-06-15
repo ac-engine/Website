@@ -21,22 +21,30 @@ html
 					$("button[id='language_all']").click( function ()
 					{
 						Cookies.set('code_state', 'all');
+
 						$("pre[class='highlight cpp']").show();
+						$("h3[class='cpp']").show();
 						$("pre[class='highlight csharp']").show();
+						$("h3[class='csharp']").show();
 					});
 
 					$("button[id='language_cpp']").click( function ()
 					{
-					Cookies.set('code_state', 'cpp');
+						Cookies.set('code_state', 'cpp');
+
 						$("pre[class='highlight cpp']").show();
+						$("h3[class='cpp']").show();
 						$("pre[class='highlight csharp']").hide();
+						$("h3[class='csharp']").hide();
 					});
 
 					$("button[id='language_cs']").click( function ()
 					{
 						Cookies.set('code_state', 'cs');
 						$("pre[class='highlight cpp']").hide();
+						$("h3[class='cpp']").hide();
 						$("pre[class='highlight csharp']").show();
+						$("h3[class='csharp']").show();
 					});
 
 					code_state = Cookies.get('code_state');
@@ -44,19 +52,25 @@ html
 					if(code_state == 'all')
 					{
 						$("pre[class='highlight cpp']").show();
+						$("h3[class='cpp']").show();
 						$("pre[class='highlight csharp']").show();
+						$("h3[class='csharp']").show();
 					}
 
 					if(code_state == 'cpp')
 					{
 						$("pre[class='highlight cpp']").show();
+						$("h3[class='cpp']").show();
 						$("pre[class='highlight csharp']").hide();
+						$("h3[class='csharp']").hide();
 					}
 
 					if(code_state == 'cs')
 					{
 						$("pre[class='highlight cpp']").hide();
+						$("h3[class='cpp']").hide();
 						$("pre[class='highlight csharp']").show();
+						$("h3[class='csharp']").show();
 					}
 				});
 	
