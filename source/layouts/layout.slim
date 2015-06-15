@@ -69,11 +69,14 @@ html
 			.main
 
 				- if !data.page.has_key?("code_selector") || data.page.code_selector=="on"
-					button id="language_all" 全ての言語
+					.language_selector
+						p 表示するサンプルコードの言語を指定できます。
+
+						button id="language_all" 全ての言語
 	
-					button id="language_cpp" C++
+						button id="language_cpp" C++
 				
-					button id="language_cs" C#
+						button id="language_cs" C#
 
 				== yield
 
