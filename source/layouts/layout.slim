@@ -81,8 +81,7 @@ html
 
 		#content
 			.main
-
-				- if !data.page.has_key?("code_selector") || data.page.code_selector=="on"
+				- if (!data.page.has_key?("code_selector") || data.page.code_selector=="on") && current_page.path != "Doc/FAQ.html"
 					.language_selector
 						p 表示するサンプルコードの言語を指定できます。
 
@@ -106,7 +105,7 @@ html
 					a href="/features.html" 主要な機能
 
 				p
-					a href="/faq.html" よくある質問
+					a href="/Doc/FAQ.html" よくある質問
 
 				p
 					a href="/showcase.html" 採用事例
