@@ -26,6 +26,8 @@ html
 						$("h3[class='cpp']").show();
 						$("pre[class='highlight csharp']").show();
 						$("h3[class='csharp']").show();
+						$("pre[class='highlight java']").show();
+						$("h3[class='java']").show();
 					});
 
 					$("button[id='language_cpp']").click( function ()
@@ -36,6 +38,8 @@ html
 						$("h3[class='cpp']").show();
 						$("pre[class='highlight csharp']").hide();
 						$("h3[class='csharp']").hide();
+						$("pre[class='highlight java']").hide();
+						$("h3[class='java']").hide();
 					});
 
 					$("button[id='language_cs']").click( function ()
@@ -45,6 +49,19 @@ html
 						$("h3[class='cpp']").hide();
 						$("pre[class='highlight csharp']").show();
 						$("h3[class='csharp']").show();
+						$("pre[class='highlight java']").hide();
+						$("h3[class='java']").hide();
+					});
+
+					$("button[id='language_java']").click( function ()
+					{
+						Cookies.set('code_state', 'cs');
+						$("pre[class='highlight cpp']").hide();
+						$("h3[class='cpp']").hide();
+						$("pre[class='highlight csharp']").hide();
+						$("h3[class='csharp']").hide();
+						$("pre[class='highlight java']").show();
+						$("h3[class='java']").show();
 					});
 
 					code_state = Cookies.get('code_state');
@@ -55,6 +72,8 @@ html
 						$("h3[class='cpp']").show();
 						$("pre[class='highlight csharp']").show();
 						$("h3[class='csharp']").show();
+						$("pre[class='highlight java']").show();
+						$("h3[class='java']").show();
 					}
 
 					if(code_state == 'cpp')
@@ -63,6 +82,8 @@ html
 						$("h3[class='cpp']").show();
 						$("pre[class='highlight csharp']").hide();
 						$("h3[class='csharp']").hide();
+						$("pre[class='highlight java']").hide();
+						$("h3[class='java']").hide();
 					}
 
 					if(code_state == 'cs')
@@ -71,6 +92,18 @@ html
 						$("h3[class='cpp']").hide();
 						$("pre[class='highlight csharp']").show();
 						$("h3[class='csharp']").show();
+						$("pre[class='highlight java']").hide();
+						$("h3[class='java']").hide();
+					}
+
+					if(code_state == 'java')
+					{
+						$("pre[class='highlight cpp']").hide();
+						$("h3[class='cpp']").hide();
+						$("pre[class='highlight csharp']").hide();
+						$("h3[class='csharp']").hide();
+						$("pre[class='highlight java']").show();
+						$("h3[class='java']").show();
 					}
 				});
 	
@@ -90,6 +123,8 @@ html
 						button id="language_cpp" C++
 				
 						button id="language_cs" C#
+
+						button id="language_java" Java
 
 				== yield
 
@@ -210,9 +245,6 @@ html
 				p
 					a href="/Doc/HowToUseApplication/MapObject2D.html" 大量の画像の描画
 
-				p
-					a href="/Doc/HowToUseApplication/MapObject2D.html" 大量の画像の描画
-				
 				p
 					a href="/Doc/HowToUseApplication/DrawAdditionally2D.html" 追加描画(2D)
 				
